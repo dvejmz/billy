@@ -7,6 +7,7 @@ function NewBill() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <h1>Create New Bill</h1>
       <form
         style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
         onSubmit={async (ev) => {

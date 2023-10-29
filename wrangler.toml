@@ -2,6 +2,11 @@ name = "billy"
 main = "src/index.ts"
 compatibility_date = "2023-10-25"
 
+[[ d1_databases ]]
+binding = "DB"
+database_name = "billy"
+database_id = "313d9fed-dc06-4d63-b239-c2dcc69441c1"
+
 # Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
 # Note: Use secrets to store sensitive data.
 # Docs: https://developers.cloudflare.com/workers/platform/environment-variables

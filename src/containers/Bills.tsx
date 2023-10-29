@@ -21,9 +21,13 @@ function Bills() {
 
   return (
     <div>
-      <ul>
-        {bills.map((b) => (<li>{b.name}</li>))}
-      </ul>
+      {bills.map((b: Bill) => (
+        <div>
+          <p>ID: {b.id}</p>
+          <p>Name: {b.name}</p>
+          <p>Total: £{b.total}</p>
+        </div>
+        ))}
     </div>
   );
 }

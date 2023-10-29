@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface Bill {
   id: string;
@@ -11,7 +11,7 @@ function Bills() {
 
   useEffect(() => {
     const fetchBills = async () => {
-      const res = await fetch('/api/helloworld');
+      const res = await fetch('/api/bill/list');
       const bill = await res.json();
       setBills([bill]);
     }

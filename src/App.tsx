@@ -7,6 +7,7 @@ import {
 
 import Home from './containers/Home';
 import Bills from './containers/Bills';
+import NewBill from './containers/NewBill';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: '/bills',
     element: <Bills />
+  },
+  {
+    path: '/new',
+    element: <NewBill />
   }
 ])
 

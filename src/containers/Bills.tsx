@@ -12,8 +12,8 @@ function Bills() {
   useEffect(() => {
     const fetchBills = async () => {
       const res = await fetch('/api/bill/list');
-      const bill = await res.json();
-      setBills([bill]);
+      const bills = await res.json();
+      setBills(bills.results);
     }
 
     fetchBills();

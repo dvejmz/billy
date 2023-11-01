@@ -1,17 +1,19 @@
+import { z } from 'zod';
+
 interface Env {
   DB: D1Database;
 }
 
-const getRandomInt = (min: number, max: number): number => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+const Bill = z.object({
+  name: z.string(),
+  total: z.number(),
+});
+type Bill = z.infer<typeof Bill>;
 
 export const onRequest: PagesFunction<Env> = async (context) => {
   let result: unknown;
-  const bill: { name: string; total: number; } = await context.request.json();
-  console.log(bill);
+  const resJson = await context.request.json();
+  const bill = Bill.parse(resJson);
 
   try {
     result = await context.env.DB

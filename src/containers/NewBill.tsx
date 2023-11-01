@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from 'react-bootstrap/Button';
 
 function NewBill() {
   const [billName, setBillName] = useState<string>('');
@@ -35,9 +36,7 @@ function NewBill() {
         <label htmlFor="billTotal">Bill Total:</label>
         <input name="billTotal" type="text" onChange={(ev) => { setBillTotal(ev.target.value); }} />
         </div>
-        <button type="submit">
-          Create
-        </button>
+        <Button type="submit" size="lg">Create</Button>
       </form>
       <p>{submissionMessage}</p>
     </div>

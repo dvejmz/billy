@@ -6,6 +6,11 @@
   flex-direction: column;
 }
 
+.App-nav {
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+}
+
 .App-nav ul {
   display: flex;
   justify-content: space-evenly;

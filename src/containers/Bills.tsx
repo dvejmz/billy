@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Card from 'react-bootstrap/Card';
 
 interface Bill {
   id: string;
@@ -22,11 +23,15 @@ function Bills() {
   return (
     <div>
       {bills.map((b: Bill) => (
-        <div>
-          <p>ID: {b.id}</p>
-          <p>Name: {b.name}</p>
-          <p>Total: £{b.total}</p>
-        </div>
+        <Card>
+          <Card.Title>
+            {b.name}
+          </Card.Title>
+          <Card.Body>
+            <p>ID: {b.id}</p>
+            <p>Total: £{b.total}</p>
+          </Card.Body>
+        </Card>
         ))}
     </div>
   );

@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 
 function NewBill() {
   const [billName, setBillName] = useState<string>('');
-  const [billTotal, setBillTotal] = useState<string>('');
+  const [billTotal, setBillTotal] = useState<number>();
   const [submissionMessage, setSubmissionMessage] = useState<string>('');
 
   return (
@@ -34,7 +34,7 @@ function NewBill() {
         <div>
 
         <label htmlFor="billTotal">Bill Total:</label>
-        <input name="billTotal" type="text" onChange={(ev) => { setBillTotal(ev.target.value); }} />
+        <input name="billTotal" type="text" onChange={(ev) => { setBillTotal(Number.parseFloat(ev.target.value)); }} />
         </div>
         <Button type="submit" size="lg">Create</Button>
       </form>

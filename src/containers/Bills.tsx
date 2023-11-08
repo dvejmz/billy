@@ -14,7 +14,7 @@ function Bills() {
     const fetchBills = async () => {
       const res = await fetch('/api/bill/list');
       const bills = await res.json();
-      setBills(bills.results);
+      setBills(bills);
     }
 
     fetchBills();
@@ -29,7 +29,7 @@ function Bills() {
           </Card.Title>
           <Card.Body>
             <p>ID: {b.id}</p>
-            <p>Total: £{b.total}</p>
+            <p>Total: £{b.total.toFixed(2)}</p>
           </Card.Body>
         </Card>
         ))}

@@ -1,17 +1,22 @@
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
 import '../App.css';
 
 function Home() {
   return (
     <div className="App">
-      <nav className="App-nav">
-        <ul>
-          <li><Link to={`/`}>Home</Link></li>
-          <li><Link to={`/new`}>New Bill</Link></li>
-          <li><Link to={`/bills`}>My Bills</Link></li>
-        </ul>
-      </nav>
+      <Navbar>
+        <Container>
+          <Navbar.Brand href="/">Billy</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="/new">New Bill</Nav.Link>
+            <Nav.Link href="/bills">My Bills</Nav.Link>
+          </Nav>
+        </Container> 
+      </Navbar>
       <Outlet />
     </div>
   );

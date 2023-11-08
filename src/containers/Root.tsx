@@ -10,10 +10,16 @@ function Home() {
     <div className="App">
       <Navbar>
         <Container>
-          <Navbar.Brand href="/">Billy</Navbar.Brand>
+          <Navbar.Brand>
+            <Link to={`/`}>Home</Link>
+          </Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/new">New Bill</Nav.Link>
-            <Nav.Link href="/bills">My Bills</Nav.Link>
+            <Nav.Link>
+              <Link to={`/new`}>New Bill</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to={`/bills`}>My Bills</Link>
+            </Nav.Link>
           </Nav>
         </Container> 
       </Navbar>
